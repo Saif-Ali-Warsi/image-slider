@@ -3,7 +3,11 @@ import { useState } from "react";
 function App() {
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  const images = ["https://placehold.co/600x400", "https://placehold.co/600x400", "https://placehold.co/600x400"];
+  const images = [
+    "https://placehold.co/600x400?text=1",
+    "https://placehold.co/600x400?text=2",
+    "https://placehold.co/600x400?text=3",
+  ];
 
   return (
     <>
