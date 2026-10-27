@@ -4,10 +4,18 @@ function App() {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const images = [
-    "https://placehold.co/600x400?text=1",
-    "https://placehold.co/600x400?text=2",
-    "https://placehold.co/600x400?text=3",
+    "https://placehold.co/1200x300?text=1",
+    "https://placehold.co/1200x300?text=2",
+    "https://placehold.co/1200x300?text=3",
   ];
+
+  function handleNext() {
+    if (currentIndex < images.length - 1) {
+      setCurrentIndex(currentIndex + 1);
+    } else {
+      setCurrentIndex(0);
+    }
+  }
 
   return (
     <>
@@ -16,7 +24,7 @@ function App() {
       <div>
         <button>Previuos</button>
         <img src={images[currentIndex]} alt="image" />
-        <button>Next</button>
+        <button onClick={handleNext}>Next</button>
       </div>
     </>
   );
