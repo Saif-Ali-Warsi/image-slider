@@ -17,12 +17,20 @@ function App() {
     }
   }
 
+  function handlePrevious() {
+    if (currentIndex > 0) {
+      setCurrentIndex(currentIndex - 1);
+    } else {
+      setCurrentIndex(images.length - 1);
+    }
+  }
+
   return (
     <>
       <h3>Image slider</h3>
 
       <div>
-        <button>Previuos</button>
+        <button onClick={handlePrevious}>Previuos</button>
         <img src={images[currentIndex]} alt="image" />
         <button onClick={handleNext}>Next</button>
       </div>
